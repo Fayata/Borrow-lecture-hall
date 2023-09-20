@@ -8,11 +8,11 @@ Proyek ini adalah bagian dari tugas mahasiswa yang kami kerjakan sebagai kelompo
 
 ## Anggota Kelompok
 
-Kami adalah anggota dari kelompok ini dan memiliki peran sebagai berikut:
+Kami adalah anggota dari kelompok sebagai berikut:
 
-- [Antika Susmita]: [21753006]
-- [Daffa Surya Septa]: [21753076]
-- [Fillyana Tri Purwa Hastuti]: [21753050]
+- Antika Susmita: 21753006
+- Daffa Surya Septa: 21753076
+- Fillyana Tri Purwa Hastuti: 21753050
 
 
 ## Tujuan Proyek
