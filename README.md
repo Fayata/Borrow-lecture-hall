@@ -8,7 +8,7 @@ Proyek ini adalah bagian dari tugas mahasiswa yang kami kerjakan sebagai kelompo
 
 ## Anggota Kelompok
 
-Kami adalah anggota dari kelompok sebagai berikut:
+Anggota dari kelompok kami adalah sebagai berikut:
 
 - Antika Susmita: 21753006
 - Daffa Surya Septa: 21753076
@@ -17,7 +17,7 @@ Kami adalah anggota dari kelompok sebagai berikut:
 
 ## Tujuan Proyek
 
-Proyek ini memiliki tujuan untuk mempermudah dosen dan mahasiswa untuk melakukan peminjaman gedung di Politeknik Negeri Lampung
+Proyek ini memiliki tujuan untuk mempermudah dosen, Staff dan mahasiswa untuk melakukan peminjaman gedung di Politeknik Negeri Lampung
 
 ## Lingkungan Pengembangan
 
