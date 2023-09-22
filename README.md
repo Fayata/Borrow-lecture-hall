@@ -10,9 +10,12 @@ Proyek ini adalah bagian dari tugas mahasiswa yang kami kerjakan sebagai kelompo
 
 Anggota dari kelompok kami adalah sebagai berikut:
 
-- Antika Susmita: 21753006
-- Daffa Surya Septa: 21753076
-- Fillyana Tri Purwa Hastuti: 21753050
+| No            | Kelompok                   | NPM           | 
+| ------------- | -------------------------- | ------------- |
+| 1.            | Antika Susmita             | 21753006      |
+| 2.            | Daffa Surya Septa          | 21753076      |
+| 3.            | Fellyana Tri Purwa Hastuti | 21753050      |
+
 
 
 ## Tujuan Proyek
