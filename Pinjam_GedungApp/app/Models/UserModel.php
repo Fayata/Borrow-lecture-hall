@@ -6,8 +6,17 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'users'; // Nama tabel user
-    protected $primaryKey = 'id'; // Kolom primary key
+    protected $table = 'users';
+    protected $primaryKey = 'id';
+    protected $useAutoIncrement = true;
+    protected $allowsField = [username, email, password];
 
-    // Tambahkan method untuk mengambil data user, melakukan validasi login, dsb.
+    public function get_data($username, $password)
+    {
+        return $this->db->table('users')
+            ->where(array('username' => $username, 'user_pass' => $password))
+            ->get()->getRowArray();
+    }
+
+
 }
