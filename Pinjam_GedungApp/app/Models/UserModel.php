@@ -9,7 +9,7 @@ class UserModel extends Model
     protected $table = 'users';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
-    protected $allowsField = [username, email, password];
+    protected $allowsField = ['username', 'email', 'password'];
 
     public function get_data($username, $password)
     {
@@ -18,5 +18,14 @@ class UserModel extends Model
             ->get()->getRowArray();
     }
 
+    // findByUsername
+    public function findByEmail($email)
+    {
+        return $this->where('email', $email)->first();
+    }
+    public function insert($data)
+    {
+        $this->db->table('users')->insert($data);
+    }
 
 }

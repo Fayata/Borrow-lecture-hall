@@ -15,14 +15,28 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-center">Silahkan Login</h5>
-                        <form action="login_process.php" method="POST">
+                        <p class="text-error">
+                            <?= session()->getFlashdata('error'); ?>
+                        </p>
+                        <?php $error_validasi = session()->getFlashdata('error_validasi') ?? null ?>
+                        <form action="<?= base_url('login') ?>" method="POST">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <input type="text" class="form-control" id="email" name="email">
+                                <?php if ($error_validasi and isset($error_validasi['email'])) { ?>
+                                    <p class="text-danger">
+                                        <?= $error_validasi['email'] ?>
+                                    </p>
+                                <?php } ?>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                                <input type="password" class="form-control" id="password" name="password">
+                                <?php if ($error_validasi and isset($error_validasi['password'])) { ?>
+                                    <p class="text-danger">
+                                        <?= $error_validasi['password'] ?>
+                                    </p>
+                                <?php } ?>
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="remember">

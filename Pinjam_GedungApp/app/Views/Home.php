@@ -9,6 +9,7 @@
     <title>Beranda</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -25,6 +26,9 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">
+                            <?= session()->get('email') ?>
+                        </a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                     <li class="nav-item dropdown">
@@ -36,7 +40,7 @@
                                 <hr class="dropdown-divider" />
                             </li>
                             <li><a class="dropdown-item" href="#!">Jenis Gedung</a></li>
-                            <li><a class="dropdown-item" href="#!">Log out</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Log out</a></li>
                         </ul>
                     </li>
                 </ul>
