@@ -1,47 +1,29 @@
 <?php
-
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
 
-class Register extends Controller
+class Register extends BaseController
 {
-    public function __construct()
-    {
-        $this->userModel = new \App\Models\UserModel();
-    }
     public function index()
     {
-        return view('register');
+        return view('Register');
     }
 
     public function processRegister()
     {
-        if (
-            !$this->validate([
-                'email' => "required|valid_email|is_unique[users.email]", //aturan is_unique
-                'password' => 'required|min_length[4]',
-            ])
-        ) {
-            return redirect()->back()->with('error_validasi', $this->validator->getErrors());
-        }
+        $model = new \App\Models\UserModel();
 
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-
-        // Simpan data ke database
         $data = [
-            'email' => $email,
-            'password' => md5($password),
+            'email' => $this->request->getVar('email'),
+            'username' => $this->request->getVar('username'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
         ];
 
-        $this->userModel->insert($data);
-
-        // set session
-        session()->setFlashdata('success', 'Data berhasil disimpan.');
-
-        // Redirect ke halaman
-        return redirect()->to('/login');
+        if ($model->save($data)) {
+            return redirect()->to('/login')->with('success', 'Akun Anda telah berhasil dibuat. Silakan masuk.');
+        } else {
+            return redirect()->to('/register')->with('error', 'Terjadi kesalahan saat mencoba mendaftar.');
+        }
     }
-
 }

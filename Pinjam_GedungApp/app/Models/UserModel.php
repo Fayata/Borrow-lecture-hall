@@ -23,9 +23,6 @@ class UserModel extends Model
     {
         return $this->where('email', $email)->first();
     }
-    public function insert($data)
-    {
-        $this->db->table('users')->insert($data);
-    }
+
 
 }

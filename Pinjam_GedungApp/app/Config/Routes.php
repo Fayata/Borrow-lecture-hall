@@ -14,4 +14,5 @@ $routes->get('home', 'Home::home');
 $routes->get('login', 'Login::index');
 $routes->post('login', 'Login::processLogin');
 $routes->get('logout', 'Login::processLogout');
-$routes->add('register', 'Auth::processRegister');
+$routes->get('Register', 'Register::index');
+$routes->post('Register', 'Register::processRegister');

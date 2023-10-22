@@ -45,7 +45,7 @@
                             <button type="submit" class="btn btn-primary btn-block">Sign in</button>
                         </form>
                         <hr>
-                        <p class="text-center">Belum Punya akun? <a href="register.php">Register</a></p>
+                        <p class="text-center">Belum Punya akun? <a href="Register.php">Register</a></p>
                     </div>
                 </div>
             </div>
