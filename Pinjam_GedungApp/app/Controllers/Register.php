@@ -1,13 +1,13 @@
 <?php
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 
 class Register extends BaseController
 {
     public function index()
     {
-        return view('Register');
+        return view('user/Register');
     }
 
     public function processRegister()
@@ -21,9 +21,9 @@ class Register extends BaseController
         ];
 
         if ($model->save($data)) {
-            return redirect()->to('/login')->with('success', 'Akun Anda telah berhasil dibuat. Silakan masuk.');
+            return redirect()->to('user/login')->with('success', 'Akun Anda telah berhasil dibuat. Silakan masuk.');
         } else {
-            return redirect()->to('/register')->with('error', 'Terjadi kesalahan saat mencoba mendaftar.');
+            return redirect()->to('user/register')->with('error', 'Terjadi kesalahan saat mencoba mendaftar.');
         }
     }
 }

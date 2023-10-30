@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace App\Controllers;
 
@@ -45,4 +45,4 @@ class PenanggungJawabController extends BaseController
     {
         // update ke db
     }
-}
+} -->

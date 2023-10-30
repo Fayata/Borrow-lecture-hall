@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class AdminModel extends Model
 {
-    protected $table = 'users';
+    protected $table = 'admin';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
     protected $allowsField = ['username', 'email', 'password'];
 
     public function get_data($email, $password)
     {
-        return $this->db->table('users')
+        return $this->db->table('admin')
             ->where(array('email' => $email, 'password' => $password))
             ->get()->getRowArray();
     }

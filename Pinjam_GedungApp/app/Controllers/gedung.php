@@ -1,28 +1,28 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\users;
 
 use App\Controllers\BaseController;
-use App\Models\FilmModel;
+use App\Models\GedungModel;
 
 class Gedung extends BaseController
 {
-    protected $film;
+    protected $gedung;
 
     public function __construct()
     {
-        $this->film = new GedungModel();
+        $this->gedung = new GedungModel();
     }
 
     public function index()
     {
-        $data['dataGedung'] = $this->film->getAllDataJoin();
-        return view("film/table", $data);
+        $data['Gedung'] = $this->gedung->getAllDataJoin();
+        return view("gedung/table", $data);
     }
 
     public function all()
     {
-        $data['data_gedung'] = $this->film->getAllDataJoin();
+        $data['gedung'] = $this->gedung->getAllDataJoin();
         return view("gedung/index", $data);
     }
 }
