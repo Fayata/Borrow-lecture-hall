@@ -28,6 +28,7 @@ Kami menjalankan proyek ini di lingkungan pengembangan berikut:
 
 - Sistem Operasi: Aplikasi WEB
 - Bahasa Pemrograman: PHP
+- Web Framework : CodeIgnither 4
 
 
 ## Kontribusi
