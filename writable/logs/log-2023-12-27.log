@@ -1,0 +1,319 @@
+CRITICAL - 2023-12-27 03:17:13 --> Class "Services" not found
+in APPPATH\Config\Routes.php on line 5.
+ 1 SYSTEMPATH\Router\RouteCollection.php(344): require()
+ 2 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:14 --> Class "Services" not found
+in APPPATH\Config\Routes.php on line 5.
+ 1 SYSTEMPATH\Router\RouteCollection.php(344): require()
+ 2 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:20 --> Class "Services" not found
+in APPPATH\Config\Routes.php on line 5.
+ 1 SYSTEMPATH\Router\RouteCollection.php(344): require()
+ 2 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:55 --> Invalid file: "auth/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(31): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:56 --> Invalid file: "auth/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(31): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:56 --> Invalid file: "auth/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(31): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:57 --> Invalid file: "auth/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(31): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+CRITICAL - 2023-12-27 03:17:57 --> Invalid file: "auth/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\AuthController.php(31): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+ERROR - 2023-12-27 03:22:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'fp_pwl', 3306, '', 0)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#6 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#7 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-27 03:22:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+ERROR - 2023-12-27 03:40:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'fp_pwl', 3306, '', 0)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#6 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#7 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-27 03:40:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+ERROR - 2023-12-27 03:41:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'fp_pwl', 3306, '', 0)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#6 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#7 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-27 03:41:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+ERROR - 2023-12-27 03:43:30 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'fp_pwl', 3306, '', 0)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#6 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#7 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-27 03:43:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
+ERROR - 2023-12-27 03:43:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', 'root', 'fp_pwl', 3306, '', 0)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#7 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#10 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\pGedung\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\pGedung\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\pGedung\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\pGedung\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\pGedung\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 D:\xampp\htdocs\pGedung\app\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+#6 D:\xampp\htdocs\pGedung\app\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+#7 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+#8 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 D:\xampp\htdocs\pGedung\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\pGedung\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\pGedung\system\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-12-27 03:43:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AuthController.php(40): App\Models\UserModel->getUserByUsername('fayata')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->processLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\xampp\\htdocs\\pGedung\\public\\index.php')
