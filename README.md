@@ -6,17 +6,6 @@ Selamat datang di proyek mandiri kami!
 
 Proyek ini adalah bagian dari tugas mahasiswa yang kami kerjakan sebagai kelompok. Kami memiliki tanggung jawab individu dalam proyek ini, dan masing-masing dari kami memiliki peran yang telah ditentukan dalam kelompok.
 
-## Anggota Kelompok
-
-Anggota dari kelompok kami adalah sebagai berikut:
-
-| No            | Kelompok                   | NPM           | 
-| ------------- | -------------------------- | ------------- |
-| 1.            | Antika Susmita             | 21753006      |
-| 2.            | Daffa Surya Septa          | 21753076      |
-| 3.            | Fellyana Tri Purwa Hastuti | 21753050      |
-
-
 
 ## Tujuan Proyek
 
@@ -28,6 +17,7 @@ Kami menjalankan proyek ini di lingkungan pengembangan berikut:
 
 - Sistem Operasi: Aplikasi WEB
 - Bahasa Pemrograman: PHP
+- Web Framework : CodeIgnither 4
 
 
 ## Kontribusi
