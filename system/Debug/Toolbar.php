@@ -83,7 +83,7 @@ class Toolbar
         $data['isAJAX']          = $request->isAJAX();
         $data['startTime']       = $startTime;
         $data['totalTime']       = $totalTime * 1000;
-        $data['totalMemory']     = number_format(memory_get_peak_usage() / 1024 / 1024, 3);
+        $data['totalMemory']     = number_format((memory_get_peak_usage()) / 1024 / 1024, 3);
         $data['segmentDuration'] = $this->roundTo($data['totalTime'] / 7);
         $data['segmentCount']    = (int) ceil($data['totalTime'] / $data['segmentDuration']);
         $data['CI_VERSION']      = CodeIgniter::CI_VERSION;
@@ -346,7 +346,8 @@ class Toolbar
     /**
      * Prepare for debugging..
      *
-     * @return void
+     * @param RequestInterface  $request
+     * @param ResponseInterface $response
      */
     public function prepare(?RequestInterface $request = null, ?ResponseInterface $response = null)
     {
@@ -364,7 +365,7 @@ class Toolbar
                 return;
             }
 
-            $toolbar = Services::toolbar(config(ToolbarConfig::class));
+            $toolbar = Services::toolbar(config(self::class));
             $stats   = $app->getPerformanceStats();
             $data    = $toolbar->run(
                 $stats['startTime'],
@@ -433,9 +434,6 @@ class Toolbar
      * Inject debug toolbar into the response.
      *
      * @codeCoverageIgnore
-     *
-     * @return void
-     * @phpstan-return never|void
      */
     public function respond()
     {

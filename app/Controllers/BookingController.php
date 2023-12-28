@@ -31,7 +31,7 @@ class BookingController extends BaseController
     {
         $roomModel = new RoomModel;
         $data['rooms'] = $roomModel->findAll();
-        return view('client/booking', $data);
+        return view('anggota/booking', $data);
     }
 
     public function RegistrationForm($id)
@@ -39,18 +39,18 @@ class BookingController extends BaseController
         $roomModel = new RoomModel();
         $data['room'] = $roomModel->find($id);
 
-        return view('client/register_booking', $data);
+        return view('anggota/register_booking', $data);
     }
 
     public function register()
     {
         // Memeriksa apakah pengguna sudah login sebagai member
-        if (!session()->has('client')) {
+        if (!session()->has('anggota')) {
             return redirect()->to('/');
         }
 
-        // Dapatkan data user_id dari sesi client
-        $user_id = session('client')['id'];
+        // Dapatkan data user_id dari sesi anggota
+        $user_id = session('anggota')['id'];
 
         // Mengambil data dari formulir
         $date_request = $this->request->getPost('date_request');

@@ -13,12 +13,9 @@ namespace CodeIgniter\Debug\Toolbar\Collectors;
 
 use CodeIgniter\Database\Query;
 use CodeIgniter\I18n\Time;
-use Config\Toolbar;
 
 /**
  * Collector for the Database tab of the Debug Toolbar.
- *
- * @see \CodeIgniter\Debug\Toolbar\Collectors\DatabaseTest
  */
 class Database extends BaseCollector
 {
@@ -77,14 +74,11 @@ class Database extends BaseCollector
      * The static method used during Events to collect
      * data.
      *
-     * @internal
-     *
-     * @return void
-     * @phpstan-return never|void
+     * @internal param $ array \CodeIgniter\Database\Query
      */
     public static function collect(Query $query)
     {
-        $config = config(Toolbar::class);
+        $config = config('Toolbar');
 
         // Provide default in case it's not set
         $max = $config->maxQueries ?: 100;
@@ -252,7 +246,7 @@ class Database extends BaseCollector
     /**
      * Gets the connections from the database config
      */
-    private function getConnections(): void
+    private function getConnections()
     {
         $this->connections = \Config\Database::getConnections();
     }

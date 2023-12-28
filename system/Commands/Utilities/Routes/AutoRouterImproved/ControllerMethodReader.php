@@ -16,8 +16,6 @@ use ReflectionMethod;
 
 /**
  * Reads a controller and returns a list of auto route listing.
- *
- * @see \CodeIgniter\Commands\Utilities\Routes\AutoRouterImproved\ControllerMethodReaderTest
  */
 final class ControllerMethodReader
 {
@@ -26,10 +24,6 @@ final class ControllerMethodReader
      */
     private string $namespace;
 
-    /**
-     * @var array<int, string>
-     * @phpstan-var list<string>
-     */
     private array $httpMethods;
 
     /**
@@ -79,8 +73,7 @@ final class ControllerMethodReader
                             $classInUri,
                             $classname,
                             $methodName,
-                            $httpVerb,
-                            $method
+                            $httpVerb
                         );
 
                         if ($routeForDefaultController !== []) {
@@ -92,15 +85,13 @@ final class ControllerMethodReader
                             continue;
                         }
 
-                        [$params, $routeParams] = $this->getParameters($method);
-
                         // Route for the default method.
                         $output[] = [
                             'method'       => $httpVerb,
                             'route'        => $classInUri,
-                            'route_params' => $routeParams,
+                            'route_params' => '',
                             'handler'      => '\\' . $classname . '::' . $methodName,
-                            'params'       => $params,
+                            'params'       => [],
                         ];
 
                         continue;
@@ -108,7 +99,23 @@ final class ControllerMethodReader
 
                     $route = $classInUri . '/' . $methodInUri;
 
-                    [$params, $routeParams] = $this->getParameters($method);
+                    $params      = [];
+                    $routeParams = '';
+                    $refParams   = $method->getParameters();
+
+                    foreach ($refParams as $param) {
+                        $required = true;
+                        if ($param->isOptional()) {
+                            $required = false;
+
+                            $routeParams .= '[/..]';
+                        } else {
+                            $routeParams .= '/..';
+                        }
+
+                        // [variable_name => required?]
+                        $params[$param->getName()] = $required;
+                    }
 
                     // If it is the default controller, the method will not be
                     // routed.
@@ -128,29 +135,6 @@ final class ControllerMethodReader
         }
 
         return $output;
-    }
-
-    private function getParameters(ReflectionMethod $method): array
-    {
-        $params      = [];
-        $routeParams = '';
-        $refParams   = $method->getParameters();
-
-        foreach ($refParams as $param) {
-            $required = true;
-            if ($param->isOptional()) {
-                $required = false;
-
-                $routeParams .= '[/..]';
-            } else {
-                $routeParams .= '/..';
-            }
-
-            // [variable_name => required?]
-            $params[$param->getName()] = $required;
-        }
-
-        return [$params, $routeParams];
     }
 
     /**
@@ -187,8 +171,7 @@ final class ControllerMethodReader
         string $uriByClass,
         string $classname,
         string $methodName,
-        string $httpVerb,
-        ReflectionMethod $method
+        string $httpVerb
     ): array {
         $output = [];
 
@@ -197,18 +180,12 @@ final class ControllerMethodReader
             $routeWithoutController = rtrim(preg_replace($pattern, '', $uriByClass), '/');
             $routeWithoutController = $routeWithoutController ?: '/';
 
-            [$params, $routeParams] = $this->getParameters($method);
-
-            if ($routeWithoutController === '/' && $routeParams !== '') {
-                $routeWithoutController = '';
-            }
-
             $output[] = [
                 'method'       => $httpVerb,
                 'route'        => $routeWithoutController,
-                'route_params' => $routeParams,
+                'route_params' => '',
                 'handler'      => '\\' . $classname . '::' . $methodName,
-                'params'       => $params,
+                'params'       => [],
             ];
         }
 

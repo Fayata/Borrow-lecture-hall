@@ -19,8 +19,6 @@ use InvalidArgumentException;
 
 /**
  * Load a response into a DOMDocument for testing assertions based on that
- *
- * @see \CodeIgniter\Test\DOMParserTest
  */
 class DOMParser
 {
@@ -103,6 +101,9 @@ class DOMParser
 
     /**
      * Checks to see if the text is found within the result.
+     *
+     * @param string $search
+     * @param string $element
      */
     public function see(?string $search = null, ?string $element = null): bool
     {
@@ -120,6 +121,8 @@ class DOMParser
 
     /**
      * Checks to see if the text is NOT found within the result.
+     *
+     * @param string $search
      */
     public function dontSee(?string $search = null, ?string $element = null): bool
     {

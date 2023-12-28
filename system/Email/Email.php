@@ -20,8 +20,6 @@ use ErrorException;
  * CodeIgniter Email Class
  *
  * Permits email to be sent using Mail, Sendmail, or SMTP.
- *
- * @see \CodeIgniter\Email\EmailTest
  */
 class Email
 {
@@ -115,9 +113,7 @@ class Email
     /**
      * SMTP Encryption
      *
-     * @var string '', 'tls' or 'ssl'. 'tls' will issue a STARTTLS command
-     *             to the server. 'ssl' means implicit SSL. Connection on port
-     *             465 should set this to ''.
+     * @var string Empty, 'tls' or 'ssl'
      */
     public $SMTPCrypto = '';
 
@@ -352,8 +348,7 @@ class Email
      * Character sets valid for 7-bit encoding,
      * excluding language suffix.
      *
-     * @var array<int, string>
-     * @phpstan-var list<string>
+     * @var array
      */
     protected $baseCharsets = [
         'us-ascii',
@@ -1069,8 +1064,6 @@ class Email
 
     /**
      * Build final headers
-     *
-     * @return void
      */
     protected function buildHeaders()
     {
@@ -1084,8 +1077,6 @@ class Email
 
     /**
      * Write Headers as a string
-     *
-     * @return void
      */
     protected function writeHeaders()
     {
@@ -1112,8 +1103,6 @@ class Email
 
     /**
      * Build Final Body and attachments
-     *
-     * @return void
      */
     protected function buildMessage()
     {
@@ -1274,8 +1263,6 @@ class Email
      * @param string      $body      Message body to append to
      * @param string      $boundary  Multipart boundary
      * @param string|null $multipart When provided, only attachments of this type will be processed
-     *
-     * @return void
      */
     protected function appendAttachments(&$body, $boundary, $multipart = null)
     {
@@ -1592,8 +1579,6 @@ class Email
 
     /**
      * Batch Bcc Send. Sends groups of BCCs in batches
-     *
-     * @return void
      */
     public function batchBCCSend()
     {
@@ -1638,8 +1623,6 @@ class Email
 
     /**
      * Unwrap special elements
-     *
-     * @return void
      */
     protected function unwrapSpecials()
     {
@@ -1854,8 +1837,6 @@ class Email
 
     /**
      * Shortcut to send RSET or QUIT depending on keep-alive
-     *
-     * @return void
      */
     protected function SMTPEnd()
     {
@@ -1873,13 +1854,9 @@ class Email
 
         $ssl = '';
 
-        // Connection to port 465 should use implicit TLS (without STARTTLS)
-        // as per RFC 8314.
         if ($this->SMTPPort === 465) {
             $ssl = 'tls://';
-        }
-        // But if $SMTPCrypto is set to `ssl`, SSL can be used.
-        if ($this->SMTPCrypto === 'ssl') {
+        } elseif ($this->SMTPCrypto === 'ssl') {
             $ssl = 'ssl://';
         }
 
@@ -2179,8 +2156,6 @@ class Email
 
     /**
      * @param string $msg
-     *
-     * @return void
      */
     protected function setErrorMessage($msg)
     {

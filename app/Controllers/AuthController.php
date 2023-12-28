@@ -20,8 +20,8 @@ class AuthController extends Controller
 
         if ($user['role'] == 'admin') {
             session()->set('admin', $data);
-        } elseif ($user['role'] == 'client') {
-            session()->set('client', $data);
+        } elseif ($user['role'] == 'anggota') {
+            session()->set('anggota', $data);
         }
     }
 
@@ -83,14 +83,14 @@ class AuthController extends Controller
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
                 'nama' => $this->request->getPost('nama'),
                 'email' => $this->request->getPost('email'),
-                'role' => $this->request->getPost('role') ?? 'client',
+                'role' => $this->request->getPost('role') ?? 'anggota',
             ];
 
             $userModel->insert($data);
 
             session()->setFlashdata('success', 'Registrasi berhasil');
 
-            var_dump(session()->getFlashdata('success'));
+            var_dump(session()->getFlashdata('success')); 
 
             return redirect()->to('/');
         } else {

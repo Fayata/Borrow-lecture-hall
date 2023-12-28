@@ -7,15 +7,15 @@ use App\Controllers\BaseController;
 class RoleController extends BaseController
 {
     /**
-     * @checkClient
+     * @checkAnggota
      */
     public function admin()
     {
         return view('admin/dashboard');
     }
 
-    public function client()
+    public function anggota()
     {
-        return view('client/dashboard');
+        return view('anggota/dashboard');
     }
 }

@@ -18,8 +18,6 @@ use RuntimeException;
  *
  * Provides a simple way to measure the amount of time
  * that elapses between two points.
- *
- * @see \CodeIgniter\Debug\TimerTest
  */
 class Timer
 {
@@ -133,8 +131,8 @@ class Timer
      * Executes callable and measures its time.
      * Returns its return value if any.
      *
-     * @param string $name The name of the timer
-     * @phpstan-param callable(): mixed $callable callable to be executed
+     * @param string   $name     The name of the timer
+     * @param callable $callable callable to be executed
      *
      * @return array|bool|float|int|object|resource|string|null
      */

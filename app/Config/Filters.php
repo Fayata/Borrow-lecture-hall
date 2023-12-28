@@ -14,10 +14,6 @@ class Filters extends BaseConfig
     /**
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
-     *
-     * @var array<string, array<int, string>|string> [filter_name => classname]
-     *                                               or [filter_name => [classname1, classname2, ...]]
-     * @phpstan-var array<string, class-string|list<class-string>>
      */
     public array $aliases = [
         'csrf'          => CSRF::class,
@@ -25,19 +21,17 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'checkAnggota' => \App\Filters\CheckAnggota::class,
     ];
 
     /**
      * List of filter aliases that are always
      * applied before and after every request.
-     *
-     * @var array<string, array<string, array<string, string>>>|array<string, array<string>>
-     * @phpstan-var array<string, list<string>>|array<string, array<string, array<string, string>>>
      */
     public array $globals = [
         'before' => [
             // 'honeypot',
-            // 'csrf',
+            'csrf',
             // 'invalidchars',
         ],
         'after' => [
@@ -56,7 +50,7 @@ class Filters extends BaseConfig
      *
      * If you use this, you should disable auto-routing because auto-routing
      * permits any HTTP method to access a controller. Accessing the controller
-     * with a method you don't expect could bypass the filter.
+     * with a method you don’t expect could bypass the filter.
      */
     public array $methods = [];
 

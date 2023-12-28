@@ -15,8 +15,6 @@ use Config\UserAgents;
 
 /**
  * Abstraction for an HTTP user agent
- *
- * @see \CodeIgniter\HTTP\UserAgentTest
  */
 class UserAgent
 {
@@ -93,7 +91,7 @@ class UserAgent
     /**
      * HTTP Referer
      *
-     * @var bool|string|null
+     * @var mixed
      */
     protected $referrer;
 
@@ -104,7 +102,7 @@ class UserAgent
      */
     public function __construct(?UserAgents $config = null)
     {
-        $this->config = $config ?? config(UserAgents::class);
+        $this->config = $config ?? new UserAgents();
 
         if (isset($_SERVER['HTTP_USER_AGENT'])) {
             $this->agent = trim($_SERVER['HTTP_USER_AGENT']);
@@ -114,6 +112,8 @@ class UserAgent
 
     /**
      * Is Browser
+     *
+     * @param string $key
      */
     public function isBrowser(?string $key = null): bool
     {
@@ -132,6 +132,8 @@ class UserAgent
 
     /**
      * Is Robot
+     *
+     * @param string $key
      */
     public function isRobot(?string $key = null): bool
     {
@@ -150,6 +152,8 @@ class UserAgent
 
     /**
      * Is Mobile
+     *
+     * @param string $key
      */
     public function isMobile(?string $key = null): bool
     {
@@ -243,8 +247,6 @@ class UserAgent
 
     /**
      * Parse a custom user-agent string
-     *
-     * @return void
      */
     public function parse(string $string)
     {
@@ -267,8 +269,6 @@ class UserAgent
 
     /**
      * Compile the User Agent Data
-     *
-     * @return void
      */
     protected function compileData()
     {

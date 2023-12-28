@@ -706,6 +706,7 @@ class BaseBuilder
      *
      * @param array|RawSql|string $key
      * @param mixed               $value
+     * @param bool                $escape
      *
      * @return $this
      */

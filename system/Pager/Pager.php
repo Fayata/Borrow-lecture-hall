@@ -24,8 +24,6 @@ use Config\Pager as PagerConfig;
  * pagination links and reading the current url's query variable, "page"
  * to determine the current page. This class can support multiple
  * paginations on a single page.
- *
- * @see \CodeIgniter\Pager\PagerTest
  */
 class Pager implements PagerInterface
 {
@@ -125,7 +123,7 @@ class Pager implements PagerInterface
         $pager = new PagerRenderer($this->getDetails($group));
 
         return $this->view->setVar('pager', $pager)
-            ->render($this->config->templates[$template]);
+            ->render($this->config->templates[$template], null, false);
     }
 
     /**
@@ -136,7 +134,7 @@ class Pager implements PagerInterface
      */
     public function store(string $group, int $page, ?int $perPage, int $total, int $segment = 0)
     {
-        if ($segment !== 0) {
+        if ($segment) {
             $this->setSegment($segment, $group);
         }
 
@@ -389,7 +387,7 @@ class Pager implements PagerInterface
     /**
      * Ensures that an array exists for the group specified.
      *
-     * @return void
+     * @param int $perPage
      */
     protected function ensureGroup(string $group, ?int $perPage = null)
     {
@@ -409,15 +407,13 @@ class Pager implements PagerInterface
 
         $this->calculateCurrentPage($group);
 
-        if ($_GET !== []) {
+        if ($_GET) {
             $this->groups[$group]['uri'] = $this->groups[$group]['uri']->setQueryArray($_GET);
         }
     }
 
     /**
      * Calculating the current page
-     *
-     * @return void
      */
     protected function calculateCurrentPage(string $group)
     {

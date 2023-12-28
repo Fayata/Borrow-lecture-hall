@@ -4,39 +4,21 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class NotificationModel extends Model
 {
-    protected $table = 'users';
+    protected $table = 'notification';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['username', 'password', 'nama', 'email', 'role'];
+    protected $allowedFields = ['title', 'message', 'status', 'create_at', 'user_id'];
 
-    public function getUserByUsername($username)
+    // Tambahkan method untuk mengambil notifikasi yang belum dibaca
+    public function getUnreadNotifications()
     {
-        return $this->where('username', $username)->first();
+        return $this->where('status', 'unread')->findAll();
     }
 
-    public function getUsers()
+    // Tambahkan method untuk menandai notifikasi sebagai sudah dibaca
+    public function markAsRead($notificationId)
     {
-        return $this->findAll();
-    }
-
-    public function getUser($id)
-    {
-        return $this->find($id);
-    }
-
-    public function addUser($data)
-    {
-        $this->insert($data);
-    }
-
-    public function updateUser($id, $data)
-    {
-        return $this->update($id, $data);
-    }
-
-    public function deleteUser($id)
-    {
-        return $this->delete($id);
+        $this->update($notificationId, ['status' => 'read']);
     }
 }

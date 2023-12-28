@@ -92,8 +92,6 @@ interface ValidationInterface
      * Set rule group.
      *
      * @param string $group Group.
-     *
-     * @return void
      */
     public function setRuleGroup(string $group);
 
@@ -152,9 +150,4 @@ interface ValidationInterface
      * Displays a single error in formatted HTML as defined in the $template view.
      */
     public function showError(string $field, string $template = 'single'): string;
-
-    /**
-     * Returns the actual validated data.
-     */
-    public function getValidated(): array;
 }

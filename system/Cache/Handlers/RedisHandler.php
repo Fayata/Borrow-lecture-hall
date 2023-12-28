@@ -19,8 +19,6 @@ use RedisException;
 
 /**
  * Redis cache handler
- *
- * @see \CodeIgniter\Cache\Handlers\RedisHandlerTest
  */
 class RedisHandler extends BaseHandler
 {
@@ -40,13 +38,10 @@ class RedisHandler extends BaseHandler
     /**
      * Redis connection
      *
-     * @var Redis|null
+     * @var Redis
      */
     protected $redis;
 
-    /**
-     * Note: Use `CacheFactory::getHandler()` to instantiate.
-     */
     public function __construct(Cache $config)
     {
         $this->prefix = $config->prefix;
@@ -159,7 +154,7 @@ class RedisHandler extends BaseHandler
             return false;
         }
 
-        if ($ttl !== 0) {
+        if ($ttl) {
             $this->redis->expireAt($key, Time::now()->getTimestamp() + $ttl);
         }
 
@@ -178,8 +173,6 @@ class RedisHandler extends BaseHandler
 
     /**
      * {@inheritDoc}
-     *
-     * @return int
      */
     public function deleteMatching(string $pattern)
     {
