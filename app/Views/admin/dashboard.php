@@ -1,14 +1,15 @@
-<?= $this->extend('layout/template') ?>
-<?= $this->section('title') ?>
-<title>Dashboard Admin</title>
-<?= $this->endSection() ?>
+<?= $this->extend('admin/layout/layout') ?>
+
 <?= $this->section('content') ?>
-<section class="section">
-    <div class="section-header">
-        <h1>Dashboard Admin</h1>
+
+<!-- Widgets Start -->
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <h3>Selamat datang <?= session('user')['nama']?> anda login sebagai <?= session('user')['role']?></h3>
+        </div>
     </div>
-    <div class="section-body">
-        <p>Thank you for logging in as an admin..</p>
-    </div>
-</section>
+</div>
+<!-- Widgets End -->
+
 <?= $this->endSection() ?>

@@ -15,12 +15,15 @@ class BookingModel extends Model
         $db = db_connect();
 
         $query = $db->table($this->table)
-            ->select($this->table . '.*, rooms.ruangan')
+            ->select($this->table . '.*, rooms.ruangan, rooms.kapasitas, rooms.fasilitas, rooms.image, users.nama')
             ->join('rooms', 'rooms.id = ' . $this->table . '.room_id', 'left')
+            ->join('users', 'users.id = ' . $this->table . '.user_id', 'left')
+            ->where($this->table . '.status', 'pending')
             ->get();
 
         return $query->getResultArray();
     }
+
 
     public function getBookingsForNotification()
     {
@@ -31,5 +34,34 @@ class BookingModel extends Model
     public function markAsNotified($bookingId)
     {
         $this->update($bookingId, ['is_notified' => 1]);
+    }
+
+    public function getApprovedBookings()
+    {
+        $db = db_connect();
+
+        $query = $db->table($this->table)
+            ->select($this->table . '.*, rooms.ruangan, rooms.kapasitas, rooms.fasilitas, rooms.image, users.nama')
+            ->join('rooms', 'rooms.id = ' . $this->table . '.room_id', 'left')
+            ->join('users', 'users.id = ' . $this->table . '.user_id', 'left')
+            ->where($this->table . '.status', 'approved')
+            ->get();
+
+        return $query->getResultArray();
+    }
+
+    public function getApprovedBookingsAnggota($id)
+    {
+        $db = db_connect();
+
+        $query = $db->table($this->table)
+            ->select($this->table . '.*, rooms.ruangan, rooms.kapasitas, rooms.fasilitas, rooms.image, users.nama')
+            ->join('rooms', 'rooms.id = ' . $this->table . '.room_id', 'left')
+            ->join('users', 'users.id = ' . $this->table . '.user_id', 'left')
+            ->where($this->table . '.status', 'approved')
+            ->where($this->table . '.user_id', $id) // Menambahkan kondisi untuk memfilter berdasarkan ID pengguna
+            ->get();
+
+        return $query->getResultArray();
     }
 }

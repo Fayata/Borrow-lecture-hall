@@ -8,7 +8,7 @@ class UserModel extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['username', 'password', 'nama', 'email', 'role'];
+    protected $allowedFields = ['username', 'password', 'nama', 'email', 'role','nomor_telepon','status_akun'];
 
     public function getUserByUsername($username)
     {
@@ -38,5 +38,15 @@ class UserModel extends Model
     public function deleteUser($id)
     {
         return $this->delete($id);
+    }
+
+    public function activateUser($id)
+    {
+        $this->update($id, ['status_akun' => 'aktif']);
+    }
+
+    public function deactivateUser($id)
+    {
+        $this->update($id, ['status_akun' => 'nonaktif']);
     }
 }

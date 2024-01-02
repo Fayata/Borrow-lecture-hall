@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
 use CodeIgniter\Controller;
+use App\Models\UserModel;
+
 
 class AuthController extends Controller
 {
@@ -40,16 +41,19 @@ class AuthController extends Controller
         $user = $userModel->getUserByUsername($username);
 
         if ($user) {
-            if (password_verify($password, $user['password'])) {
+            if ($user['status_akun'] === 'aktif' && password_verify($password, $user['password'])) {
                 $this->createUserSession($user);
                 session()->set('user', $user);
 
                 $successMessage = 'Login berhasil';
                 if ($user['role'] == 'admin') {
-                    return redirect()->to('/admin/dashboard')->with('success', $successMessage);
+                    return redirect()->to('/AdminController')->with('success', $successMessage);
                 } elseif ($user['role'] == 'anggota') {
-                    return redirect()->to('/anggota/dashboard')->with('success', $successMessage);
+                    return redirect()->to('/AnggotaController')->with('success', $successMessage);
                 }
+            } elseif ($user['status_akun'] === 'nonaktif') {
+                // Akun nonaktif, tampilkan pesan error
+                return redirect()->back()->with('error', 'Akun tidak aktif');
             } else {
                 // Password tidak cocok
                 return redirect()->back()->with('error', 'Password salah');
@@ -68,33 +72,26 @@ class AuthController extends Controller
 
     public function processRegister()
     {
-        $validationRules = [
-            'username' => 'required|is_unique[users.username]',
-            'password' => 'required|min_length[6]',
-            'nama' => 'required',
-            'email' => 'required|valid_email|is_unique[users.email]',
+        $anggotaModel = new UserModel();
+
+        $data = [
+            'nama' => $this->request->getPost('nama'),
+            'username' => $this->request->getPost('username'),
+            'email' => $this->request->getPost('email'),
+            'nomor_telepon' => $this->request->getPost('nohp'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'role' => 'anggota',
+            'status_akun' => 'nonaktif' 
         ];
 
-        if ($this->validate($validationRules)) {
-            $userModel = new UserModel();
+        $anggotaModel->addUser($data);
 
-            $data = [
-                'username' => $this->request->getPost('username'),
-                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-                'nama' => $this->request->getPost('nama'),
-                'email' => $this->request->getPost('email'),
-                'role' => $this->request->getPost('role') ?? 'anggota',
-            ];
-
-            $userModel->insert($data);
-
-            session()->setFlashdata('success', 'Registrasi berhasil');
-
-            var_dump(session()->getFlashdata('success')); 
-
-            return redirect()->to('/');
+        if ($anggotaModel->db->affectedRows() > 0) {
+            // Jika berhasil, set pesan sukses menggunakan flash session
+            return redirect()->to('/')->with('success', 'Registrasi berhasil, tunggu konfirmasi admin');
         } else {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+            // Jika gagal, set pesan error menggunakan flash session
+            return redirect()->back()->with('error', 'Data gagal disimpan');
         }
     }
 

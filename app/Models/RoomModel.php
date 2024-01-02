@@ -8,7 +8,7 @@ class RoomModel extends Model
 {
     protected $table = 'rooms';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['ruangan', 'kapasitas', 'fasilitas', 'image'];
+    protected $allowedFields = ['ruangan', 'kapasitas', 'fasilitas', 'image','status'];
 
     public function getRooms()
     {
@@ -33,5 +33,21 @@ class RoomModel extends Model
     public function deleteRoom($id)
     {
         return $this->delete($id);
+    }
+
+    public function getNonFreeRooms()
+    {
+        return $this->where('status !=', 'free')->findAll();
+    }
+
+    public function getRoomAnggota()
+    {
+        $builder = $this->db->table('rooms'); 
+        $builder->select('*');
+        $builder->where('status !=', 'pending'); 
+        $query = $builder->get();
+    
+        // Mengembalikan hasil query
+        return $query->getResultArray();
     }
 }

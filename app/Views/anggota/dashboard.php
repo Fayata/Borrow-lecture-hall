@@ -1,14 +1,15 @@
-<?= $this->extend('partial/template') ?>
-<?= $this->section('title') ?>
-<title>Dashboard Member</title>
-<?= $this->endSection() ?>
+<?= $this->extend('anggota/layout/layout') ?>
+
 <?= $this->section('content') ?>
-<section class="section">
-    <div class="section-header">
-        <h1>Dashboard Member</h1>
+
+<!-- Widgets Start -->
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <h3>Selamat datang <?= session('user')['nama']?> anda login sebagai <?= session('user')['role']?></h3>
+        </div>
     </div>
-    <div class="section-body">
-        <p>Thank you for logging in as a member.</p>
-    </div>
-</section>
+</div>
+<!-- Widgets End -->
+
 <?= $this->endSection() ?>
